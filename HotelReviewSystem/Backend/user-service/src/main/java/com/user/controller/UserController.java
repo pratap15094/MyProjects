@@ -49,7 +49,7 @@ public class UserController {
 				    .about("This is dummy user because some service is down")
 				    .userId("12345")
 				    .build();
-		return new ResponseEntity<User>(user, HttpStatus.OK);
+		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 	
 	@GetMapping
