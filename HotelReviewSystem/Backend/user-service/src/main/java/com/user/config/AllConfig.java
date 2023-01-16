@@ -14,5 +14,4 @@ public class AllConfig {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-
 }
