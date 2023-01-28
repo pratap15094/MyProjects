@@ -1,0 +1,33 @@
+<style src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></style>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid"  style="background-color: #f0ba3e;">
+    <a><b>Hello, </b>{{username}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    &nbsp;&nbsp;&nbsp;
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <i class="fa-thin fa-house"></i>
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  [routerLink]="[ 'register']">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+      <select #type (change)="onselected(type.value)">
+        <option default>Title</option>
+        <option>Category</option>
+        <option>Publisher</option>
+      </select>
+      <form class="d-flex"  #regForm='ngForm' name="myForm" #myForm="ngForm" (ngSubmit)="saveQueryToSessionStorage(myForm)">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="inputSearch"  [(ngModel)]="book">
+        <button class="btn btn-outline-success" type="submit"  [disabled]="!regForm.valid">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

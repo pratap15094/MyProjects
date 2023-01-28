@@ -1,0 +1,25 @@
+<div class="outer">
+    <h3
+        style="background-color: black; color: burlywood; text-align: center; padding-top: 5px;border-bottom:1px solid burlywood;">
+        Search Result
+    </h3>
+   
+    <ul class="tilesWrap">
+        <h1 style="color: azure;">{{message}}</h1>
+        <h1 style="color: rgb(252, 156, 11);">{{message1}}</h1>
+        <li *ngFor="let b of books,index as i">
+            <h2><img style="" width="70px" height="105px" src="{{b.bookLogo}}"></h2>
+            <h3>{{b.bookTitle}}</h3>
+            <p><span>Genre - </span>
+                {{b.bookCategory}}
+            </p>
+            <p><span>Price - </span>
+                {{b.bookPrice | currency:'INR'}}
+            </p>
+            <p><span>Publisher- </span>
+                {{b.bookPublisher}}
+            </p>
+            <button type="button" class="btn btn-success" (click)="subscribeMethod(b)">Subscribe</button>
+        </li>
+    </ul>
+  </div>

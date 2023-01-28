@@ -1,0 +1,22 @@
+nav{
+    padding:0px;
+    
+  }
+  .container-fluid{
+    padding:10px;
+  }
+  button {
+      background-color: black; 
+      color: white; 
+    }
+    
+  button:hover {
+      background-color: #825d05;
+      color: white;
+    }
+    select{
+      background-color: rgb(243, 198, 49);
+      width: 80px;
+      height: 30px;
+      margin-right: 15px;
+    }

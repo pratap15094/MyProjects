@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-home-navbar></app-home-navbar>
+    <section class="start">
+        <div class="banner">
+            <h1>Goodbye to the old ways.<br>Say, hello to the new avtar of Learning!</h1>
+            <a href="#" class="btn login-btn" [routerLink]="['login']">Login </a>
+            <a href="#" class="btn register-btn" (click)="guestRedirect()">Guest Reader</a>
+           
+        </div>
+     </section>   
+
+     <section class="intro">
+        <h2>Digital Books</h2>
+            
+        <p>
+            Digital Books is an open, editable library catalog, building towards a web page for every book ever published and Created.
+           <br> Just <a>login</a> using your <b class="bold">User ID</b> and <b class="bold">Password</b> to experience the benefits of a seamless learning with a wonderfull book reading experience.<br><br>
+        </p>
+        <p style="text-align: center;">
+        <b class="bold">Still not a part of the Digital Books family ?</b><br>
+        Login as a <a>Guest Reader</a> and register youself to enjoy the book reading and leaning experience.
+         </p>   
+     </section>
+          
+     <section class="dos-and-dont">
+    <div class="block">
+        
+            <div class="plan-box-do">
+                <div>
+                    <h3>Digital Books</h3>
+                   <!-- <p class="plan-price">$399 <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 13.30$ per meal </p>-->
+                </div>
+                <div>
+                    <ul>
+                        <li><b>Environment</b> Friendly. No paper waste.</li>
+                        <li><b>Instant </b>Learn, any time-any where.</li>
+                        <li><b>Cost</b>Spend less, read more.</li>
+                    </ul>
+                </div>
+
+            </div>
+        
+        
+            <div class="plan-box-dont">
+                <div>
+                    <h3>Physical Books</h3>
+               <!-- <p class="plan-price">$149 <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 14.90$ per meal </p> -->
+                </div> 
+                <div>
+                    <ul>
+                        <li>Why kill plants!, </li>
+                        <li>Storage limit </li>
+                        <li>Not Portable</li>
+                    </ul>
+                </div>
+            </div>
+        
+    </div>
+</section>
+
+    <section class="phishing">
+        <div class="row">
+            <h2>Few Tips to enhance your Learning experience!</h2>
+            
+            <div>
+                <h3>A few important tips to keep in mind </h3>
+                <ul>
+                    <li>Login as guest user to access books.</li>
+                    <li>Only guest users are allowed to register as reader or author.</li>
+                    <li>Subscribe book you like to access the book content.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Instructions for Book Author and Reader</h3>
+                <ul>
+                    <li>Register yourself as Author to access author features.</li>
+                    <li>Create books and update books created by yourself.</li>
+                    <li>Didn't likeed the book?, Unsubscribe within 24 Hours.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="mall-slide" style="margin:auto; width: 70%; margin-bottom: 30px;">
+        <div class="slid-content">
+            <div class="mall-show-slide fade" *ngFor="let item of ImageData;">
+                <img class="image-slider" src="{{item}}">
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+        <p style="color: white;"> ©2020 developed & Managed by Digital Books</p>
+      </div>
+</body>
+
+</html>
