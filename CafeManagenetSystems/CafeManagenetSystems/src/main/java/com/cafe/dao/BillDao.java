@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.cafe.pojo.Bill;
 
-public interface BillDao extends JpaRepository<Bill, Integer>{
+public interface BillDao extends JpaRepository<Bill,Integer>{
 
 	List<Bill> getAllBills();
 
