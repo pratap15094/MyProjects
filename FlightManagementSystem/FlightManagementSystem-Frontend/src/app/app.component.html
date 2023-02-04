@@ -10,17 +10,20 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand " style="background-color:  #20456c !important;">
+        <nav class="navbar navbar-expand " style="background-color:  #044080 !important;">
 
             <a href="/home" class="navbar-brand">
 
                 <div class="icon">
-                    <img src="../assets/36e82ef9-193b-4a92-b13e-637295421ac5.jpg" alt="image" />FlightBuzz
+                    <img src="../assets/36e82ef9-193b-4a92-b13e-637295421ac5.jpg" alt="image" />SportBuzz
                 </div>
             </a>
             <ul class="navbar-nav mr-auto" routerLinkActive="active">
                 <li class="nav-item">
                     <a href="/home" class="nav-link" routerLink="home">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/home" class="nav-link" routerLink="home">About</a>
                 </li>
 
                 <li class="nav-item " *ngIf="showAdminBoard ">
@@ -30,15 +33,16 @@
                     <a href="/attendee" class="nav-link " routerLink="attendee">Attendee Board</a>
                 </li>
                 <li class="nav-item ">
-                    <a href="/cancelBooking " class="nav-link " *ngIf="isLoggedIn" routerLink="cancelBooking">Cancel-Booking</a>
+                    <a href="/cancelBooking " class="nav-link " *ngIf="isLoggedIn"
+                        routerLink="cancelBooking">Cancel-Booking</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto " *ngIf="!isLoggedIn ">
                 <li class="nav-item ">
-                    <a href="/register" class="nav-link " routerLink="register">Sign Up</a>
+                    <a href="/register" class="nav-link " routerLink="register" >Sign Up</a>
                 </li>
                 <li class="nav-item ">
-                    <a href="/login" class="nav-link " routerLink="login">Login</a>
+                    <a href="/login" class="nav-link " routerLink="login" >Login</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto " *ngIf="isLoggedIn ">
@@ -59,5 +63,4 @@
 
 </html>
 <router-outlet>
-
 </router-outlet>

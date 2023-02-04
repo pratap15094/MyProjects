@@ -15,7 +15,6 @@ public Seats(int seat_id,String status, int capacity, int rate) {
 	this.rate = rate;
 }
 
-
 public int getSeat_id() {
 	return seat_id;
 }
