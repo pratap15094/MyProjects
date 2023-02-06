@@ -9,7 +9,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     <title>SportBuzz</title>
 </head>
 
@@ -17,18 +16,13 @@
 <body>
     <section class="banner" id="top">
         <div class="container">
-
-           <div id="search-form">
+            <!-- <div id="search-form">
                 <div id="header">
                     <h1>Get Your Flight</h1>
                 </div>
-
                 <div class="flight" id="flightbox">
-
                     <form id="flight-form" name="form" (ngSubmit)="onSubmit()">
-
-
-                        <!-- FROM/TO -->
+                        
                         <div id="flight-depart">
                             <div class=" info-box ">
                                 <label for=" ">LEAVING FROM</label>
@@ -39,9 +33,7 @@
                                     <option value="Amritsar">Amritsar</option>
                                     <option value="Bhopal">Bhopal</option>
                                 </select>
-
                             </div>
-
                             <div class="info-box " id="arrive-box ">
                                 <label for=" ">ARRIVING AT</label>
                                 <select id="dep-to" required [(ngModel)]="form.arrival_location" name="arrival_location"
@@ -51,11 +43,9 @@
                                     <option value="Amritsar">Amritsar</option>
                                     <option value="Bhopal">Bhopal</option>
                                 </select>
-
                             </div>
                         </div>
-
-                        <!-- FROM/TO -->
+                       
                         <div id="flight-dates ">
                             <div class="info-box ">
                                 <label>
@@ -74,23 +64,20 @@
 
 
 
-                        SEARCH BUTTON
+                       
                         <div id="flight-search ">
                             <div>
                                 <button type="submit " class="info-box " id="btn1">Search</button>
 
                             </div>
                         </div>
-
                     </form>
                 </div>
- -->
-
-            </div>
+            </div> -->
         </div>
 
     </section>
-    <section class="Data">
+    <!-- <section class="Data">
         <table class="table">
             <thead *ngFor="let flight of result">
                 <tr *ngFor="let new of flight.flight">
@@ -110,41 +97,47 @@
 
             </thead>
         </table>
-    </section>
+    </section> -->
     <footer id="colophon" class="site-footer" role="contentinfo" style="padding: 10px;">
         <div class="social-wrapper">
-          <ul>
-            <li>
-              <a href="#" target="_blank">
-                <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png" alt="Googleplus Logo" class="googleplus-icon"></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
-            </li>
-            <li>
-              <a href="#" target="_blank">
-                <img src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico" alt="Foursquare Logo" class="foursquare-icon"></a>
-            </li>
-          </ul>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png"
+                            alt="Twitter Logo" class="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo"
+                            class="instagram-icon"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico"
+                            alt="Facebook Logo" class="facebook-icon"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png"
+                            alt="Googleplus Logo" class="googleplus-icon"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170"
+                            alt="Youtube Logo" class="youtube-icon"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico"
+                            alt="Foursquare Logo" class="foursquare-icon"></a>
+                </li>
+            </ul>
         </div>
-      
+
         <nav class="footer-nav" role="navigation">
-          <h3>©2023 Cognizant, all rights reserved</h3>
+            <h3>©2023 Cognizant, all rights reserved</h3>
         </nav>
-      </footer>
+    </footer>
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js "></script>
 

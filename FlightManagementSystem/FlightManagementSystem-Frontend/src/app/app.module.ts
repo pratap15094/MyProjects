@@ -17,6 +17,7 @@ import { SeatingComponent } from './seating/seating.component';
 import { PaymentComponent } from './payment/payment.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { PaymentComponent } from './payment/payment.component';
     CancelBookingComponent,
     SeatingComponent,
     PaymentComponent,
+
     
   ],
   imports: [

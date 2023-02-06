@@ -4,7 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
@@ -36,6 +38,7 @@ import security.repository.UserRepository;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+
 	@Autowired
 	AuthenticationManager authenticationManager;
 	@Autowired
@@ -69,9 +72,12 @@ public class AuthController {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is already in use!"));
 		}
 		// Create new user's account
-		User user = new User(signUpRequest.getUsername(), signUpRequest.getEmail(),
-				encoder.encode(signUpRequest.getPassword()));
+		User user = new User(signUpRequest.getUsername(), signUpRequest.getAddress(), signUpRequest.getState(),
+				signUpRequest.getCountry(), signUpRequest.getEmail(), signUpRequest.getPanNumber(),
+				signUpRequest.getNumber(), signUpRequest.getDob(), encoder.encode(signUpRequest.getPassword()));
+
 		Set<String> strRoles = signUpRequest.getRoles();
+
 		Set<Role> roles = new HashSet<>();
 		if (strRoles == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_USER)

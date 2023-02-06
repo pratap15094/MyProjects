@@ -5,54 +5,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+
     <div class="image">
         <div class="container">
-            <div class="card card-container">
+            <div class="form-horizontal" role="form">
+                <h2>Registration</h2>
                 <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
                     <div class="form-group">
-                        <h4> <label for="username">Username</label></h4>
-                        <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
-                            minlength="3" maxlength="20" #username="ngModel" />
+                        <label for="username" class="col-sm-3 control-label">Name*</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="User Name" class="form-control" name="username"
+                                [(ngModel)]="form.username" required minlength="3" maxlength="20" #username="ngModel" />
+                        </div>
                         <div class="alert-danger" *ngIf="username.errors && f.submitted">
                             <div *ngIf="username.errors['required']">Username is required</div>
-                            <div *ngIf="username.errors['minlength']">
-                                Username must be at least 3 characters
-                            </div>
-                            <div *ngIf="username.errors['maxlength']">
-                                Username must be at most 20 characters
-                            </div>
+                            <div *ngIf="username.errors['minlength']">Username must be at least 3 characters</div>
+                            <div *ngIf="username.errors['maxlength']"> Username must be at most 20 characters</div>
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <h4><label for="email">Email</label>
-                        </h4>
-                        <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
-                            #email="ngModel" />
+                        <label for="email" class="col-sm-3 control-label">Email* </label>
+                        <div class="col-sm-9">
+                            <input type="email" placeholder="Email ID" class="form-control" name="email"
+                                [(ngModel)]="form.email" required email #email="ngModel" />
+                        </div>
                         <div class="alert-danger" *ngIf="email.errors && f.submitted">
                             <div *ngIf="email.errors['required']">Email is required</div>
-                            <div *ngIf="email.errors['email']">
-                                Email must be a valid email address
-                            </div>
+                            <div *ngIf="email.errors['email']">Email must be a valid email address</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <h4> <label for="password">Password</label></h4>
-                        <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
-                            minlength="8" #password="ngModel" />
+                        <label for="mobilenumber" class="col-sm-3 control-label">Number* </label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="Mobile Number" class="form-control" name="mobilenumber"
+                                [(ngModel)]="form.mobilenumber" required mobilenumber #mobilenumber="ngModel"
+                                minlength="10" />
+                        </div>
+                        <div class="alert-danger" *ngIf="mobilenumber.errors && f.submitted">
+                            <div *ngIf="mobilenumber.errors['required']">Mobilenumber is required</div>
+                            <div *ngIf="mobilenumber.errors['minlength']">Contact number must be 10 digits long</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pannumber" class="col-sm-3 control-label">PAN Number* </label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="PAN Number" class="form-control" name="pannumber"
+                                [(ngModel)]="form.pannumber" required pannumber #pannumber="ngModel" />
+                        </div>
+                        <div class="alert-danger" *ngIf="pannumber.errors && f.submitted">
+                            <div *ngIf="pannumber.errors['required']">Mobilenumber is required</div>
+                            <div *ngIf="pannumber.errors['minlength']">PAN must be 12 characters long</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate" class="col-sm-3 control-label">Date of Birth* </label>
+                        <div class="col-sm-9">
+                            <div class="col-sm-9">
+                                <input type="date" placeholder="birthDate" class="form-control" name="birthDate"
+                                    [(ngModel)]="form.birthDate" required birthDate #birthDate="ngModel" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-9">
+                            <input type="password" placeholder="Password" class="form-control" name="password"
+                                [(ngModel)]="form.password" required minlength="8" #password="ngModel" />
+                        </div>
                         <div class="alert-danger" *ngIf="password.errors && f.submitted">
                             <div *ngIf="password.errors['required']">Password is required</div>
-                            <div *ngIf="password.errors['minlength']">
-                                Password must be at least 8 characters
-                            </div>
+                            <div *ngIf="password.errors['minlength']">Password must be at least 8 characters</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-block">Sign Up</button>
+                        <label for="address" class="col-sm-3 control-label">Address* </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="Address" class="form-control" name="address"
+                                [(ngModel)]="form.address" required address #address="ngModel" />
+                        </div>
+                        <div class="alert-danger" *ngIf="address.errors && f.submitted">
+                            <div *ngIf="address.errors['required']">Address is required</div>
+                        </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="city" class="col-sm-3 control-label">City* </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="City" class="form-control" name="city"
+                                [(ngModel)]="form.city" required city #city="ngModel" />
+                        </div>
+                        <div class="alert-danger" *ngIf="city.errors && f.submitted">
+                            <div *ngIf="city.errors['required']">City is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="col-sm-3 control-label">State* </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="State" class="form-control" name="state"
+                                [(ngModel)]="form.state" required state #state="ngModel" />
+                        </div>
+                        <div class="alert-danger" *ngIf="state.errors && f.submitted">
+                            <div *ngIf="state.errors['required']">State is required</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+
+
                     <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
                         Signup failed!<br />{{ errorMessage }}
                     </div>
@@ -63,6 +143,10 @@
             </div>
         </div>
     </div>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+
     <footer id="colophon" class="site-footer" role="contentinfo">
         <div class="social-wrapper">
             <ul>
@@ -98,13 +182,10 @@
                 </li>
             </ul>
         </div>
-
         <nav class="footer-nav" role="navigation">
             <h3>©2023 Cognizant, all rights reserved</h3>
         </nav>
     </footer>
-
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
 
 </html>

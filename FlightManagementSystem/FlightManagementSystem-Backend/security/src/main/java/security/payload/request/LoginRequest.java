@@ -1,27 +1,47 @@
 package security.payload.request;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
+import lombok.Data;
 
 public class LoginRequest {
-	  @NotBlank
-	  private String username;
 
-	  @NotBlank
-	  private String password;
+	@Pattern(regexp = "[a-zA-Z ]+", message = "Name should contain only alphabets and spaces")
+	private String username;
 
-	  public String getUsername() {
-	    return username;
-	  }
+//	@Email(message = "Invalid email address")
+//	private String email;
 
-	  public void setUsername(String username) {
-	    this.username = username;
-	  }
+	@NotBlank
+	private String password;
 
-	  public String getPassword() {
-	    return password;
-	  }
-
-	  public void setPassword(String password) {
-	    this.password = password;
-	  }
+	public LoginRequest(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
 	}
+
+	public LoginRequest() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+}
