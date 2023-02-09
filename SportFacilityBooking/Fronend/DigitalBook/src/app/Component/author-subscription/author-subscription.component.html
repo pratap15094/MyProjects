@@ -1,0 +1,24 @@
+<div class="outer">
+    <h3
+        style="background-color: black; color: burlywood; text-align: center; padding-top: 5px;border-bottom:1px solid burlywood;">
+        My Subscribed Books
+    </h3>
+    <ul class="tilesWrap">
+        <li *ngFor="let b of books,index as i">
+            <h2><img style="" width="70px" height="105px" src="{{b.bookLogo}}"></h2>
+            <h3>{{b.bookTitle}}</h3>
+            <p><span>Author - </span>
+                {{b.bookPublisher}}
+            </p>
+            <p><span>Genre - </span>
+                {{b.bookCategory}}
+            </p>
+            <p><span>Price - </span>
+                {{b.bookPrice | currency:'INR'}}
+            </p>
+            <p><button type="button" class="btn btn-success" (click)="readBook(b)">Read Book</button> &nbsp; <button type="button" class="btn btn-success" (click)="unsubscribeMethod(b)">Unsubscribe</button></p>
+        </li>
+       
+    </ul>
+    
+</div>

@@ -44,7 +44,6 @@ onSubmit():void{
   console.log(this.result);
   return this.result;
   })
-  
 }
 clickFunction():void{
   alert(" Please Login To Make Booking!")

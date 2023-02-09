@@ -1,0 +1,14 @@
+
+<div class="topnav">
+     <ul>
+         <li><a [routerLink]="['/']"><i class="material-icons">home</i> <span class="nav-text"> Home</span></a></li>
+         <div class="dropdown1">
+            <a href=""  [routerLink]="['login']"><i class="material-icons">login</i> <span class="nav-text"> Login</span></a>
+          </div>
+         <div class="dropdown">
+           <a  (click)="guestRedirect()"><i class="material-icons"> how_to_reg</i> <span class="nav-text"> Guest User</span></a>
+         </div> 
+         <li style="float: right; margin-right: 45px;"><a [routerLink]="['/contactus']"><span class="material-icons">contacts</span> <span class="nav-text"> Contact us</span></a></li> 
+        </ul>
+ </div>
+ 
