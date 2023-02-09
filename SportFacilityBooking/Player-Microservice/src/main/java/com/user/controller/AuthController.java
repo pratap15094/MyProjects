@@ -36,6 +36,7 @@ import com.user.utility.JwtUtils;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/auth")
 public class AuthController {
+	
 	@Autowired
 	AuthenticationManager authenticationManager;
 
