@@ -9,10 +9,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Role {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
 	@Enumerated(EnumType.STRING)
 	private ERole name;
 

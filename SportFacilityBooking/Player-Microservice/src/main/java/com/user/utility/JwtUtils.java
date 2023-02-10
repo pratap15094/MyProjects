@@ -21,7 +21,6 @@ public class JwtUtils {
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 	private String jwtSecret = "saurabh@123";
 	private int jwtExpirationMs = 900000;
-
 	public String generateJwtToken(Authentication authentication) {
 		UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
 		return Jwts.builder().setSubject((userPrincipal.getUsername())).setIssuedAt(new Date())
@@ -48,6 +47,6 @@ public class JwtUtils {
 		} catch (IllegalArgumentException e) {
 			logger.error("JWT claims string is empty: {}", e.getMessage());
 		}
-		return false;
+	return false;
 	}
 }

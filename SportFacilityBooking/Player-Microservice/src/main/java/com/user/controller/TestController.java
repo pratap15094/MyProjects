@@ -94,13 +94,13 @@ public class TestController {
 //	    return book;
 //  }
   
-  @GetMapping("/getauthername/{bookId}")
-  public String getBookAuthorName(@PathVariable int bookId) {
-	  String url="http://localhost:8082/book/getauthorname/"+bookId;
-	  String authorName = this.restTemplate.getForObject(url, String.class);
-	  return authorName;
-  }
-  
+//  @GetMapping("/getauthername/{bookId}")
+//  public String getBookAuthorName(@PathVariable int bookId) {
+//	  String url="http://localhost:8082/book/getauthorname/"+bookId;
+//	  String authorName = this.restTemplate.getForObject(url, String.class);
+//	  return authorName;
+//  }
+//  
 //  @GetMapping("/searchbycategory/{bookCategory}")
 //  public List<Book> searchBookByCategory(@PathVariable String bookCategory){
 //	  String url="http://localhost:8082/book/searchbycategory/"+bookCategory;
@@ -150,12 +150,12 @@ public class TestController {
 //	  return book;
 //  }
   
-  @GetMapping("/getbookcontent/{bookTitle}")
-  public String getBookContentByTitle(@PathVariable String  bookTitle) {
-	  String url = "http://localhost:8082/book/getbookContent/"+bookTitle;
-	  String content = this.restTemplate.getForObject(url, String.class);
-	  return content;
-  }
+//  @GetMapping("/getbookcontent/{bookTitle}")
+//  public String getBookContentByTitle(@PathVariable String  bookTitle) {
+//	  String url = "http://localhost:8082/book/getbookContent/"+bookTitle;
+//	  String content = this.restTemplate.getForObject(url, String.class);
+//	  return content;
+//  }
   
 //  @PostMapping("/subscribe/create")
 //  public Integer createSubscription(@RequestBody SubscriptionMapperDto subscriptionRequest) throws Exception
@@ -226,19 +226,19 @@ public class TestController {
 //	  return bookList;
 //  }
   
-  @GetMapping("/searchforupdate/{bookTitle}")
-  public Integer getBookBytitleupdate(@PathVariable String bookTitle){
-	  String url = "http://localhost:8082/book/getbookid"+"/"+bookTitle;
-	  Integer book = this.restTemplate.getForObject(url, Integer.class);
-	  return book;
-  }
-  
-  @GetMapping("/getauthoridbyname/{name}")
-  public Integer getAuthorIdbyName(@PathVariable String name) {
-	  String url = "http://localhost:8082/book/getauthoridbyname"+"/"+name;
-	  Integer id = this.restTemplate.getForObject(url, Integer.class);
-	  return id;
-  }
+//  @GetMapping("/searchforupdate/{bookTitle}")
+//  public Integer getBookBytitleupdate(@PathVariable String bookTitle){
+//	  String url = "http://localhost:8082/book/getbookid"+"/"+bookTitle;
+//	  Integer book = this.restTemplate.getForObject(url, Integer.class);
+//	  return book;
+//  }
+//  
+//  @GetMapping("/getauthoridbyname/{name}")
+//  public Integer getAuthorIdbyName(@PathVariable String name) {
+//	  String url = "http://localhost:8082/book/getauthoridbyname"+"/"+name;
+//	  Integer id = this.restTemplate.getForObject(url, Integer.class);
+//	  return id;
+//  }
   
 //  @PostMapping("/createbook/{authorId}")
 //  public ResponseEntity createBook(@PathVariable int authorId,@RequestBody Book book) {

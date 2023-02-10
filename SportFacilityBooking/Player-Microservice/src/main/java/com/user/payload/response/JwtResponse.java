@@ -18,47 +18,60 @@ public class JwtResponse {
 	    this.roles = roles;
 	  }
 
-	  public String getAccessToken() {
-	    return token;
-	  }
+	  
+	public JwtResponse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-	  public void setAccessToken(String accessToken) {
-	    this.token = accessToken;
-	  }
 
-	  public String getTokenType() {
-	    return type;
-	  }
+	public String getToken() {
+		return token;
+	}
 
-	  public void setTokenType(String tokenType) {
-	    this.type = tokenType;
-	  }
+	public void setToken(String token) {
+		this.token = token;
+	}
 
-	  public Integer getId() {
-	    return id;
-	  }
+	public String getType() {
+		return type;
+	}
 
-	  public void setId(Integer id) {
-	    this.id = id;
-	  }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-	  public String getEmail() {
-	    return email;
-	  }
+	public Integer getId() {
+		return id;
+	}
 
-	  public void setEmail(String email) {
-	    this.email = email;
-	  }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-	  public String getUsername() {
-	    return username;
-	  }
+	public String getUsername() {
+		return username;
+	}
 
-	  public void setUsername(String username) {
-	    this.username = username;
-	  }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-	  public List<String> getRoles() {
-	    return roles;
-	  }
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
+	  
 	}

@@ -21,7 +21,8 @@ import com.user.service.UserDetailsServiceImpl;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig { 
-  @Autowired
+  
+	@Autowired
   UserDetailsServiceImpl userDetailsService;
 
   @Autowired
@@ -64,7 +65,6 @@ public class WebSecurityConfig {
         .anyRequest().authenticated();
     
     http.authenticationProvider(authenticationProvider());
-
     http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     
     return http.build();

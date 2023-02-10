@@ -2,6 +2,7 @@ package com.user.entity;
 
 public class JwtResponse {
 
+
 	private String JwtToken;
 
 	public JwtResponse(String jwtToken) {
