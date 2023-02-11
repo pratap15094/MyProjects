@@ -17,4 +17,10 @@ public class UserService implements UserDetailsService {
 		return new User("admin", "password", new ArrayList<>());
 	}
 
+//	public String updatePlayerDetail(User user, Integer id) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//	
+
 }

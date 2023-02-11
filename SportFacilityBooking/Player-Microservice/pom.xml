@@ -17,6 +17,9 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		<authentication-manager>
+			<authentication-provider ref="authProvider" />
+		</authentication-manager>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
