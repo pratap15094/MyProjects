@@ -72,8 +72,8 @@ public class AuthController {
 		String jwt = jwtUtils.generateJwtToken(authentication);
 
 		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-		List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority()).collect(Collectors.toList());
-				
+		List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
+				.collect(Collectors.toList());
 
 		return ResponseEntity.ok(
 				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), roles));
@@ -91,9 +91,10 @@ public class AuthController {
 
 		// Create new user's account
 		User user = new User(signUpRequest.getUsername(), signUpRequest.getEmail(), signUpRequest.getPan_number(),
-				signUpRequest.getMob_number(), signUpRequest.getDate_of_birth(),encoder.encode(signUpRequest.getPassword()),
-				signUpRequest.getAddress(), signUpRequest.getCity(), signUpRequest.getState(),
-				signUpRequest.getCountry());
+				signUpRequest.getMob_number(), signUpRequest.getDate_of_birth(),
+				encoder.encode(signUpRequest.getPassword()), signUpRequest.getAddress_line_1(),
+				signUpRequest.getAddress_line_1(), signUpRequest.getCity(), signUpRequest.getState(),
+				signUpRequest.getCountry(), signUpRequest.getPincode());
 		Set<String> tmpRoles = new HashSet<>();
 		tmpRoles.add(signUpRequest.getRole());
 		Set<String> strRoles = tmpRoles;
@@ -103,48 +104,48 @@ public class AuthController {
 			Role userRole = roleRepository.findByName(ERole.ROLE_GUEST)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
-		} 
-//			else {
-//			strRoles.forEach(role -> {
-//				System.out.println(role);
-//				switch (role) {
-//				case "ROLE_READER":
-//					System.out.println("role is here!!!!!");
-//					Role adminRole = roleRepository.findByName(ERole.ROLE_READER)
+		} else {
+			strRoles.forEach(role -> {
+				System.out.println(role);
+				switch (role) {
+				case "ROLE_READER":
+					System.out.println("role is here!!!!!");
+					Role adminRole = roleRepository.findByName(ERole.ROLE_READER)
+							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+					roles.add(adminRole);
+
+					break;
+//				case "ROLE_AUTHOR":
+//					Role modRole = roleRepository.findByName(ERole.ROLE_AUTHOR)
 //							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-//					roles.add(adminRole);
-
-//          break;
-//        case "ROLE_AUTHOR":
-//          Role modRole = roleRepository.findByName(ERole.ROLE_AUTHOR)
-//              .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-//          roles.add(modRole);
-//          String rolefordto = "ROLE_AUTHOR";
-//          String url = "http://localhost:8082/book/addauthor";
-//          AuthorDto authorDto = new AuthorDto();
-//          authorDto.setAuthorName(user.getUsername());
-//          authorDto.setAuthorEmail(user.getEmail());
-//          authorDto.setAuthorPassword(user.getPassword());
-//          authorDto.setAuthorRole(rolefordto);
-//          HttpHeaders headers = new HttpHeaders();
-//        	headers.setContentType(MediaType.APPLICATION_JSON);
-//       	    HttpEntity entity = new HttpEntity(authorDto,headers);
-//        	ResponseEntity<String> status = this.restTemplate.exchange(url, HttpMethod.POST,entity, String.class);
-
+//					roles.add(modRole);
+//					String rolefordto = "ROLE_AUTHOR";
+//					String url = "http://localhost:8082/book/addauthor";
+//					AuthorDto authorDto = new AuthorDto();
+//					authorDto.setAuthorName(user.getUsername());
+//					authorDto.setAuthorEmail(user.getEmail());
+//					authorDto.setAuthorPassword(user.getPassword());
+//					authorDto.setAuthorRole(rolefordto);
+//					HttpHeaders headers = new HttpHeaders();
+//					headers.setContentType(MediaType.APPLICATION_JSON);
+//					HttpEntity entity = new HttpEntity(authorDto, headers);
+//					ResponseEntity<String> status = this.restTemplate.exchange(url, HttpMethod.POST, entity,
+//							String.class);
+//
 //					break;
-//				default:
-//					System.out.println("role is here!!null1!!");
-//					Role userRole = roleRepository.findByName(ERole.ROLE_GUEST)
-//							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-//					roles.add(userRole);
-//				}
-//			});
-//		}
-		
+				default:
+					System.out.println("role is here!!null1!!");
+					Role userRole = roleRepository.findByName(ERole.ROLE_GUEST)
+							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+					roles.add(userRole);
+				}
+			});
+		}
+
 		String info = "" + user.getUsername() + " Congratulations!";
 		user.setRoles(roles);
 		userRepository.save(user);
-		//sendEmail.mailer(user.getEmail(), info);
+		// sendEmail.mailer(user.getEmail(), info);
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}
 }

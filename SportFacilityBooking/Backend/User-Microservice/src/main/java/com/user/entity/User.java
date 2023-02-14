@@ -12,18 +12,22 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+
 @Entity
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String username;
 	private String email;
 	private String pan_number;
 	private String mob_number;
 	private String date_of_birth;
 	private String password;
-	private String address;
+	private String address_line_1;
+	private String address_line_2;
+	private String pincode;
 	private String city;
 	private String state;
 	private String country;
@@ -33,7 +37,8 @@ public class User {
 	private Set<Role> roles = new HashSet<>();
 
 	public User(String username, String email, String pan_number, String mob_number, String date_of_birth,
-			String password, String address, String city, String state, String country) {
+			String password, String address_line_1, String address_line_2, String city, String state, String country,
+			String pincode) {
 		super();
 
 		this.username = username;
@@ -42,10 +47,12 @@ public class User {
 		this.mob_number = mob_number;
 		this.date_of_birth = date_of_birth;
 		this.password = password;
-		this.address = address;
+		this.address_line_1 = address_line_1;
+		this.address_line_2 = address_line_2;
 		this.city = city;
 		this.state = state;
 		this.country = country;
+		this.pincode = pincode;
 
 	}
 
@@ -109,12 +116,20 @@ public class User {
 		this.password = password;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddress_line_1() {
+		return address_line_1;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress_line_1(String address_line_1) {
+		this.address_line_1 = address_line_1;
+	}
+
+	public String getAddress_line_2() {
+		return address_line_2;
+	}
+
+	public void setAddress_line_2(String address_line_2) {
+		this.address_line_2 = address_line_2;
 	}
 
 	public String getCity() {
@@ -139,6 +154,14 @@ public class User {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
 	}
 
 	public Set<Role> getRoles() {

@@ -10,14 +10,16 @@ public class SignupRequest {
 	private String mob_number;
 	private String date_of_birth;
 	private String password;
-	private String address;
+	private String address_line_1;
+	private String address_line_2;
+	private String pincode;
 	private String city;
 	private String state;
 	private String country;
-	private String role;
+	private String role="ROLE_GUEST";
 
 	public SignupRequest(String username, String email, String pan_number, String mob_number, String date_of_birth,
-			String password, String address, String city, String state, String country, String role) {
+			String password, String address_line_1, String address_line_2,String pincode,String city, String state, String country, String role) {
 		super();
 		this.username = username;
 		this.email = email;
@@ -25,7 +27,9 @@ public class SignupRequest {
 		this.mob_number = mob_number;
 		this.date_of_birth=date_of_birth;
 		this.password = password;
-		this.address = address;
+		this.address_line_1 = address_line_1;
+		this.address_line_2 = address_line_2;
+		this.pincode=pincode;
 		this.city = city;
 		this.state = state;
 		this.country = country;
@@ -85,12 +89,30 @@ public class SignupRequest {
 		this.password = password;
 	}
 
-	public String getAddress() {
-		return address;
+	
+
+	public String getAddress_line_1() {
+		return address_line_1;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress_line_1(String address_line_1) {
+		this.address_line_1 = address_line_1;
+	}
+
+	public String getAddress_line_2() {
+		return address_line_2;
+	}
+
+	public void setAddress_line_2(String address_line_2) {
+		this.address_line_2 = address_line_2;
+	}
+
+	public String getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
 	}
 
 	public String getCity() {
