@@ -1,27 +1,29 @@
-.navbar{
-    margin-left: 0px;
-    width: 100%;
+.navbar {
+  margin-left: 0px;
+  width: 100%;
+  background-color: antiquewhite;
 }
-ul{
-    width: 100%;
+
+ul {
+  width: 100%;
 }
 
 button {
-    background-color: black; 
-    color: white; 
-    
-  }
-  
+  background-color: black;
+  color: white;
+
+}
+
 button:hover {
-    background-color: #825d05;
-    color: white;
-  }
-  select{
-    background-color: rgb(249, 248, 247);
-    width: 100px;
-    height: 38px;
-    margin-right: 15px;
-    margin-left: 830px;
-    border-radius: 6%;
-  }
-  
+  background-color: #825d05;
+  color: white;
+}
+
+select {
+  background-color: rgb(249, 248, 247);
+  width: 100px;
+  height: 38px;
+  margin-right: 15px;
+  margin-left: 830px;
+  border-radius: 6%;
+}

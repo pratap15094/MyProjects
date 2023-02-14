@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
   selector: 'app-dashboard-navbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
   }
-
+  
+  logOut(){
+      this.tokenStorage.signOut();
+      window.location.reload();
+  }
 }

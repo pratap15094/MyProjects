@@ -1,1 +1,94 @@
-<p>booking works!</p>
+<div class="container">
+    <header>Book Your Facility</header>
+    <form class="form" name="myForm" #myForm="ngForm" #regForm='ngForm' (ngSubmit)='onSubmit(myForm)'>
+        <div class="form first">
+            <div class="personal details">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>First Name</label>
+                        <input name="firstname" type="text" required placeholder="First Name" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="booking.firstname" #firstname="ngModel" />
+                    </div>
+                    <div class="input-field">
+                        <label>Last Name</label>
+                        <input name="lastname" type="text" required placeholder="Last Name" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="booking.lastname" #lastname="ngModel" />
+                    </div>
+                    <div class="input-field">
+                        <label>Facility</label>
+                        <select input name="facility" type="text" required placeholder="Select Facility"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.facility"
+                            #facility="ngModel">
+                            <option disabled selected="selected">Select Your Facility</option>
+                            <option>Cricket GR1</option>
+                            <option>Cricket GR2</option>
+                            <option>Football GR1</option>
+                            <option>Football GR2</option>
+                            <option>Basketball GR1</option>
+                            <option>Basketball GR2</option>
+                            <option>Hockey GR1</option>
+                            <option>Hockey GR2</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Booking date</label>
+                        <input name="bookingdate" type="date" required placeholder="Booking Date" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="booking.bookingdate" #bookingdate="ngModel" />
+                    </div>
+                    <div class="input-field">
+                        <label>Starting Time</label>
+                        <select input name="startingtime" type="text" required placeholder="Select Starting Time"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.startingtime"
+                            #startingtime="ngModel">
+                            <option disabled selected="selected">Select Your Starting Time</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Ending Time</label>
+                        <select input name="endingtime" type="text" required placeholder="Select Ending Time"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.endingtime"
+                            #endingtime="ngModel">
+                            <option disabled selected="selected">Select Your Ending Time</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success"
+                style="margin-left:100px; text-align:center; ; margin-bottom: 10px; background-color: rgb(6, 92, 6);">Submit</button>
+        </div>
+    </form>
+</div>

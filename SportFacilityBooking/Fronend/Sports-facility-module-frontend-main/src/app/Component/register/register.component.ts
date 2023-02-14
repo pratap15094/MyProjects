@@ -32,7 +32,7 @@ this.authService.register(this.register).subscribe(
     this.isSignUpFailed = false;
     f.resetForm();
     alert("Registered Successfully!");
-    // this.router.navigate(['/login'])
+    this.router.navigate(['/login'])
   },
   err => {
     this.errorMessage = err.error.message;

@@ -37,7 +37,7 @@ export class UpdateComponent implements OnInit {
         this.isSignUpFailed = false;
         f.resetForm();
         alert("Details Update Successfully!");
-        // this.router.navigate(['/login'])
+       this.router.navigate(['/login'])
       },
       err => {
         this.errorMessage = err.error.message;
