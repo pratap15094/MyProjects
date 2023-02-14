@@ -1,5 +1,5 @@
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(/assets/wallpaper.jpg) ;
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/assets/wallpaper.jpg);
 
 }
 
@@ -7,7 +7,7 @@ body{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color:rgb(2, 2, 51);
+    background-color: rgb(2, 2, 51);
     color: white;
     width: auto;
 }
@@ -21,21 +21,23 @@ body{
 }
 
 #table {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: arial, sans-serif;
+    font-size: small;
     border-collapse: collapse;
     width: 100%;
 }
 
 #table td,
-#table th {
+th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.center{
+.center {
     margin-left: 35px;
-    margin-right:35px;
+    margin-right: 35px;
 }
+
 /* .column{
     padding: 35px;
 } */
