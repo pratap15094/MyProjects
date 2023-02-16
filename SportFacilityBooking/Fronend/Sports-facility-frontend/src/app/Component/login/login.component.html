@@ -1,17 +1,25 @@
 <app-navbar></app-navbar>
 <div>
   <div class="box-form">
-    <div class="left">
+    <!-- <div class="left">
       <div class="overlay">
         <h1>Hello Player.</h1>
         <p>Player enjoy the games, Also connect with social media...</p>
+        <br>
+        <br>
         <span>
           <p>login with social media</p>
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</a>
+
           <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
         </span>
+        <span>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Login with Facebook</a>
+        </span>
+        <span>
+          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>Login with Linkedin</a>
+        </span>
       </div>
-    </div>
+    </div> -->
     <div class="right">
       <h5>Login...</h5>
       <p>Don't have an account? <a name="create" style="color: rgb(102, 100, 100);"><b><u>Create Your
@@ -26,8 +34,7 @@
           <input name="password" #password="ngModel" placeholder="Password" type="password" class="form-control"
             id="exampleInputPassword1" minlength="6" [(ngModel)]="form.password" required><br>
           <button type="submit" class="btn btn-primary">Login</button>
-          <div class="alert" *ngIf="password.errors?.['required']">Please Enter Password!
-          </div>
+          <!-- <div class="alert" *ngIf="password.errors?.['required']">Please Enter Password!</div> -->
         </div>
         <br>
       </form>

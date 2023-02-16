@@ -1,8 +1,8 @@
 .box-form {
   margin: 0 auto;
-  margin: 50px;
-  margin-left: 200px;
-  width: 60%;
+  margin: 55px;
+  margin-left: 350px;
+  width: 40%;
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
@@ -11,54 +11,55 @@
   align-items: stretch;
   justify-content: space-between;
   box-shadow: 0 0 20px 6px #090b6f85;
-  
 }
 
-@media (max-width: 80px) {
+/* @media (max-width: 80px) {
   .box-form {
     flex-flow: wrap;
     text-align: center;
     align-content: center;
     align-items: center;
   }
-}
+} */
 
 .box-form div {
-  height: auto;
+  height: 20%;
+  margin-left: 15px;
 }
 
-.box-form .left {
+/* .box-form .left {
   color: #FFFFFF;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/assets/img3.jpg");
   overflow: hidden;
-  /* width: 40%; */
-}
+  width: 40%;
+   width: 100px;
+} */
 
-.box-form .left .overlay {
+/* .box-form .left .overlay {
   padding: 20px;
   width: 100%;
   height: 100%;
   background: #5961f9ad;
   overflow: hidden;
   box-sizing: border-box;
-}
+} */
 
-.box-form .left .overlay h1 {
+/* .box-form .left .overlay h1 {
   font-size: 7vmax;
   line-height: 1;
   font-weight: 900;
   margin-top: 40px;
   margin-bottom: 20px;
-}
+} */
 
-.box-form .left .overlay span p {
+/* .box-form .left .overlay span p {
   margin-top: 30px;
   font-weight: 900;
-}
+} */
 
-.box-form .left .overlay span a {
+/* .box-form .left .overlay span a {
   background: #3b5998;
   color: #FFFFFF;
   margin-top: 10px;
@@ -66,26 +67,28 @@
   border-radius: 100px;
   display: inline-block;
   box-shadow: 0 3px 6px 1px #042d4657;
-}
+} */
 
-.box-form .left .overlay span a:last-child {
+/* .box-form .left .overlay span a:last-child {
   background: #1dcaff;
   margin-left: 30px;
-}
+} */
 
 .box-form .right {
-  padding: 40px;
+  padding: 5px;
   overflow: hidden;
+  width: fit-content;
+
 }
 
-@media (max-width: 80px) {
+/* @media (max-width: 80px) {
   .box-form .right {
     width: 80%;
   }
-}
+} */
 
 .box-form .right h5 {
-  font-size: 6vmax;
+  font-size: 4vmax;
   line-height: 0;
   padding-top: 50px;
 }
@@ -93,7 +96,7 @@
 .box-form .right p {
   font-size: 14px;
   color: #B0B3B9;
-  padding-top: 140px;
+  padding-top: 50px;
 }
 
 .box-form .right .inputs {
@@ -104,10 +107,10 @@
   width: 100%;
   padding: 10px;
   margin-top: 25px;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #B0B3B9;
+  border-bottom: 2px solid #565757;
 }
 
 .box-form .right .remember-me--forget-password {
@@ -118,12 +121,12 @@
 
 .box-form .right .remember-me--forget-password input {
   margin: 0;
-  margin-right: 7px;
+  margin-right: 5px;
   width: auto;
 }
 
 .box-form .right button {
-  float: right;
+  /* float: right; */
   color: rgb(10, 3, 3);
   font-size: 16px;
   padding: 12px 35px;
@@ -133,6 +136,7 @@
   outline: 0;
   box-shadow: 0px 4px 20px 0px #f8cc05a6;
   background-image: linear-gradient(135deg, #c58308 10%, #ecc92a 100%);
+  margin-left: 320px;
 }
 
 label {
@@ -141,7 +145,7 @@ label {
   margin-left: 30px;
 }
 
-label::before {
+/* label::before {
   content: ' \f00c';
   position: absolute;
   font-family: FontAwesome;
@@ -151,31 +155,31 @@ label::before {
   color: transparent;
   left: -30px;
   transition: all 0.2s linear;
-}
+} */
 
-label:hover::before {
+/* label:hover::before {
   font-family: FontAwesome;
   content: ' \f00c';
   color: #fff;
   cursor: pointer;
   background: #70F570;
-}
+} */
 
-label:hover::before .text-checkbox {
+/* label:hover::before .text-checkbox {
   background: #70F570;
-}
+} */
 
-label span.text-checkbox {
+/* label span.text-checkbox {
   display: inline-block;
   height: auto;
   position: relative;
   cursor: pointer;
   transition: all 0.2s linear;
-}
+} */
 
-label input[type="checkbox"] {
+/* label input[type="checkbox"] {
   display: none;
-}
+} */
 
 /* fooyer */
 .footer {
