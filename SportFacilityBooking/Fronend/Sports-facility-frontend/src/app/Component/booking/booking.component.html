@@ -4,23 +4,17 @@
         <div class="form first">
             <div class="personal details">
                 <div class="fields">
-
-                    <!-- <div class="input-field">
-                        <label>Facility ID</label>
-                        <input name="facilityId" type="number" required placeholder="Facility ID" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="booking.facilityId" #facilityId="ngModel" />
-                    </div> -->
                     <div class="input-field">
-                        <label>Facility ID</label>
-                        <select input name="facilityId" type="number" required placeholder="Facility ID" class="form__input"
+                        <label>Choose Facility</label>
+                        <select input name="facilityId" type="number" required placeholder="Choose Facility" class="form__input"
                         id="exampleInputPassword1" [(ngModel)]="booking.facilityId" #facilityId="ngModel" >
-                            <option disabled selected="selected">Select facility ID</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
+                            <option disabled selected="selected">Select facility</option>
+                            <option value="1">Cricket-Box-1</option>
+                            <option value="2">Cricket-Box-2</option>
+                            <option value="3">Football-Ground-1</option>
+                            <option value="4">Badminton-Court-1</option>
+                            <option value="5">Badminton-Court-2</option>
+                            <option value="6">Badminton-Court-3</option>
                         </select>
                     </div>
 
@@ -29,36 +23,6 @@
                         <input name="bookingDate" type="date" required placeholder="Booking Date" class="form__input"
                             id="exampleInputPassword1" [(ngModel)]="booking.bookingDate" #bookingDate="ngModel" />
                     </div>
-
-                    <!-- <div class="input-field">
-                        <label>Facility Name</label>
-                        <select input name="facilityName" type="text" required placeholder="Select Facility Name"
-                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.facilityName"
-                            #facilityName="ngModel">
-                            <option disabled selected="selected">Select Facility Name</option>
-                            <option>Cricket</option>
-
-                            <option>Football</option>
-                            <option>Basketball</option>
-
-                            <option>Hockey </option>
-
-                        </select>
-                    </div>
-                    <div class="input-field">
-                        <label>Facility Category</label>
-                        <select input name="facilityCategory" type="text" required
-                            placeholder="Select facility Category" class="form__input" id="exampleInputPassword1"
-                            [(ngModel)]="booking.facilityCategory" #facilityCategory="ngModel">
-                            <option disabled selected="selected">Select facility Category</option>
-                            <option>Cricket</option>
-                            <option>Football</option>
-                            <option>Basketball</option>
-                            <option>Hockey</option>
-                        </select>
-                    </div> -->
-
-
                     <div class="input-field">
                         <label>Starting Time</label>
                         <select input name="startTime" type="text" required placeholder="Select Start Time"

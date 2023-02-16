@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/entity/User';
 import { LoginService } from 'src/app/services/login.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -18,12 +19,14 @@ export class RegisterComponent implements OnInit {
   errorMessage = '';
 
   constructor(private authService: LoginService, private router: Router) { }
- 
-  
-  ngOnInit(): void {
+
+
+  ngOnInit(): any {
+
   }
+
   onSubmit(f: NgForm): void {
-    
+
     this.authService.register(this.register).subscribe(
       data => {
         console.log(data);

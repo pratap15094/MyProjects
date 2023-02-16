@@ -6,35 +6,26 @@
             <div class="personal details">
                 <span class="title">Personal Details</span>
                 <div class="fields">
-                    <!-- <div class="input-field">
-                        <label>Full Name</label>
-                        <input name="username" type="text" required placeholder="User Name" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="update.username" #username="ngModel" />
-                    </div> -->
+                 
 
                     <div class="input-field">
                         <label>Date of Birth</label>
                         <input name="birthDate" type="date" required placeholder="Date of birth" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="update.date_of_birth" #birthDate="ngModel" />
+                            id="exampleInputPassword1" [(ngModel)]="update.date_of_birth" #birthDate="ngModel" max="2005-01-01" min="1920-01-01"/>
                     </div>
-                  
-                    <!-- <div class="input-field">
-                        <label>Email</label>
-                        <input name="email" type="text" required placeholder="Email" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="update.email" #email="ngModel" />
-                    </div> -->
+                
 
                     <div class="input-field">
                         <label>Mobile Number</label>
                         <input name="mobilenumber" type="text" required placeholder="Mobile Number"
                             class="form__input" id="exampleInputPassword1" [(ngModel)]="update.mob_number"
-                            #mobilenumber="ngModel" />
+                            #mobilenumber="ngModel" pattern="[0-9]{10}"/>
                     </div>
 
                     <div class="input-field">
                         <label>PAN Number</label>
                         <input name="pannumber" type="text" required placeholder="Pan Number" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="update.pan_number" #pannumbaer="ngModel" />
+                            id="exampleInputPassword1" [(ngModel)]="update.pan_number" #pannumbaer="ngModel" pattern="[A-Za-z]{5}\d{4}[A-Za-z]{1}" />
                     </div>
                 </div>
             </div>

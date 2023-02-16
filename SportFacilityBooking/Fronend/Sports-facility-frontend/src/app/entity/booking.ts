@@ -5,8 +5,7 @@ export class Booking {
     startTime: string;
     endTime: string;
 
-    full_name:string;
-    facility_category:string;
-    facility_name:string;
-    
+    fullName:string;
+    facilityCategory:string;
+    facilityName:string;
 }

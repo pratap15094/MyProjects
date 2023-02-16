@@ -8,68 +8,69 @@
                 <div class="fields">
                     <div class="input-field">
                         <label>Full Name<span style="color:red;">*</span></label>
-                        <input name="username" type="text" required placeholder="User Name" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.username" #username="ngModel" />
-                       
+                        <input name="username" type="text" placeholder="E.g: John Smith" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.username" #username="ngModel" required />
                     </div>
-
                     <div class="input-field">
                         <label>Date of Birth<span style="color:red;">*</span></label>
-                        <input name="birthDate" type="date" required placeholder="Date of birth" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.date_of_birth" #birthDate="ngModel" />
+                        <input name="birthDate" type="date" placeholder="Date of birth" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.date_of_birth" #birthDate="ngModel"
+                            max="2005-01-01" min="1920-01-01" required />
+                        <!-- max="2005-01-01" min="1920-01-01" -->
                     </div>
 
                     <div class="input-field">
                         <label>Email<span style="color:red;">*</span></label>
-                        <input name="email" type="text" required placeholder="Email" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.email" #email="ngModel" />
+                        <input name="email" type="email" placeholder="someone@example.com" class="form__input"
+                            pattern="emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;"
+                            id="exampleInputPassword1" [(ngModel)]="register.email" #email="ngModel" required />
                     </div>
 
                     <div class="input-field">
                         <label>Mobile Number<span style="color:red;">*</span></label>
-                        <input name="mobilenumber" type="number" required placeholder="Mobile Number"
+                        <input name="mobilenumber" type="tel" placeholder="Mobile Number" pattern="[0-9]{10}"
                             class="form__input" id="exampleInputPassword1" [(ngModel)]="register.mob_number"
-                            #mobilenumber="ngModel" />
+                            #mob_number="ngModel" required />
                     </div>
-
                     <div class="input-field">
                         <label>PAN Number<span style="color:red;">*</span></label>
-                        <input name="pannumber" type="text" required placeholder="Pan Number" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.pan_number" #pannumbaer="ngModel" />
+                        <input name="pannumber" type="text" placeholder="Pan Number" class="form__input"
+                            pattern="[A-Za-z]{5}\d{4}[A-Za-z]{1}" id="exampleInputPassword1"
+                            [(ngModel)]="register.pan_number" #pannumbaer="ngModel" required />
                     </div>
 
                     <div class="input-field">
                         <label>Password<span style="color:red;">*</span></label>
-                        <input name="password" type="password" required placeholder="Password" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.password" #password="ngModel" />
+                        <input name="password" type="password" placeholder="Password" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.password" #password="ngModel" required />
                     </div>
                 </div>
             </div>
 
             <div class="Address Details">
                 <span class="title">Address Details</span>
-
                 <div class="fields">
                     <div class="input-field">
                         <label>Address Line 1<span style="color:red;">*</span></label>
-                        <input name="address1" type="text" required placeholder="Address Line 1" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.address_line_1" #address1="ngModel" />
+                        <input name="address1" type="text" placeholder="Address Line 1" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.address_line_1" #address1="ngModel"
+                            required />
                     </div>
                     <div class="input-field">
-                        <label>Address Line 2</label>
-                        <input name="address2" type="text" required placeholder="Address Line 2" class="form__input"
+                        <label>Address Line 2<span style="color:rgb(11, 10, 10);">(optinal)</span></label>
+                        <input name="address2" type="text" placeholder="Address Line 2" class="form__input"
                             id="exampleInputPassword1" [(ngModel)]="register.address_line_2" #address2="ngModel" />
                     </div>
 
                     <div class="input-field">
                         <label> City<span style="color:red;">*</span></label>
-                        <input name="city" type="text" required placeholder="City" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.city" #city="ngModel" />
+                        <input name="city" type="text" placeholder="City" class="form__input" id="exampleInputPassword1"
+                            [(ngModel)]="register.city" #city="ngModel" required />
                     </div>
                     <div class="input-field">
                         <label>State</label>
-                        <select input name="state" type="text" required placeholder="Select State" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.state" #state="ngModel">
+                        <select input name="state" type="text" placeholder="Select State" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.state" #state="ngModel" required>
                             <option disabled selected>Select state</option>
                             <option>Andhra Pradesh</option>
                             <option>Andaman and Nicobar Islands</option>
@@ -111,14 +112,15 @@
                     </div>
                     <div class="input-field">
                         <label>Pin Code<span style="color:red;">*</span></label>
-                        <input name="pincode" type="text" required placeholder="Pin Code" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.pincode" #pincode="ngModel" />
+                        <input name="pincode" type="text" placeholder="Pin Code" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.pincode" #pincode="ngModel"
+                            pattern="[1-9][0-9]{5}" required />
                     </div>
 
                     <div class="input-field">
                         <label>Country<span style="color:red;">*</span></label>
-                        <input name="country" type="text" required placeholder="Country" class="form__input"
-                            id="exampleInputPassword1" [(ngModel)]="register.country" #country="ngModel" />
+                        <input name="country" type="text" placeholder="Country" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="register.country" #country="ngModel" required />
                     </div>
                 </div>
             </div>
