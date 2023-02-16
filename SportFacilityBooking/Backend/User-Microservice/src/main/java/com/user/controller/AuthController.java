@@ -2,14 +2,11 @@ package com.user.controller;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -17,6 +14,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -115,24 +113,6 @@ public class AuthController {
 					roles.add(adminRole);
 
 					break;
-//				case "ROLE_AUTHOR":
-//					Role modRole = roleRepository.findByName(ERole.ROLE_AUTHOR)
-//							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-//					roles.add(modRole);
-//					String rolefordto = "ROLE_AUTHOR";
-//					String url = "http://localhost:8082/book/addauthor";
-//					AuthorDto authorDto = new AuthorDto();
-//					authorDto.setAuthorName(user.getUsername());
-//					authorDto.setAuthorEmail(user.getEmail());
-//					authorDto.setAuthorPassword(user.getPassword());
-//					authorDto.setAuthorRole(rolefordto);
-//					HttpHeaders headers = new HttpHeaders();
-//					headers.setContentType(MediaType.APPLICATION_JSON);
-//					HttpEntity entity = new HttpEntity(authorDto, headers);
-//					ResponseEntity<String> status = this.restTemplate.exchange(url, HttpMethod.POST, entity,
-//							String.class);
-//
-//					break;
 				default:
 					System.out.println("role is here!!null1!!");
 					Role userRole = roleRepository.findByName(ERole.ROLE_GUEST)
@@ -141,11 +121,33 @@ public class AuthController {
 				}
 			});
 		}
-
 		String info = "" + user.getUsername() + " Congratulations!";
 		user.setRoles(roles);
 		userRepository.save(user);
 		// sendEmail.mailer(user.getEmail(), info);
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+	}
+
+	@PatchMapping("/updateuser")
+	public String updatePlayer(@RequestBody User user) {
+		String msg = "Upadted User " + user.getUsername();
+		Optional<com.user.entity.User> dummyUser = userRepository.findByUsername(user.getUsername());
+		if (dummyUser.isEmpty()) {
+			return "Failed to update";
+		} else {
+			User tmpUser = dummyUser.get();
+			tmpUser.setId(dummyUser.get().getId());
+			tmpUser.setAddress_line_1(user.getAddress_line_1());
+			tmpUser.setAddress_line_2(user.getAddress_line_2());
+			tmpUser.setCity(user.getCity());
+			tmpUser.setCountry(user.getCountry());
+			tmpUser.setDate_of_birth(user.getDate_of_birth());
+			tmpUser.setMob_number(user.getMob_number());
+			tmpUser.setPan_number(user.getPan_number());
+			tmpUser.setPincode(user.getPincode());
+			tmpUser.setState(user.getState());
+			userRepository.save(tmpUser);
+		}
+		return "Upadted User " + user.getUsername();
 	}
 }

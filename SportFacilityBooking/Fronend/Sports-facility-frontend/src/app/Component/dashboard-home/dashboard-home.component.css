@@ -1,0 +1,89 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/assets/wallpaper.jpg);
+
+}
+
+/* #table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(225, 190, 12);
+    color: white;
+    width: auto;
+    font-family: sans-serif;
+   
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+} 
+
+#table {
+    font-family: arial, sans-serif;
+    font-size: small;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+    
+}
+
+#table td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.center {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.column{
+    padding: 35px;
+}
+
+#datafac{
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: #f0e190;
+}
+ */
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    margin-left: 200px
+}
+
+th,
+td {
+    padding: 1em;
+    background: #f4eeee;
+    border-bottom: 2px solid rgb(2, 25, 66);
+}
+
+.css-mine {
+    margin-top: 2em;
+    clear: both;
+}
+
+body {
+    margin: 1.5em;
+}
+
+th {
+    color: rgb(49, 226, 43);
+    background-color: rgb(26, 75, 165);
+}
+
+td {
+    color: rgb(10, 10, 10);
+    background-color: rgb(236, 238, 241);
+}

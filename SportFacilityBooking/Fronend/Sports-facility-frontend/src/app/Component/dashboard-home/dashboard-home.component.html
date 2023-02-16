@@ -1,0 +1,48 @@
+<!-- <div id="table" class="center">
+    <div class="row" style="margin-right:100px"> -->
+<h2 style="text-align: center; margin-top: 20px; font-size: 150%; color: rgb(240, 236, 236);">Player Booking
+    Details</h2>
+<table class="data">
+    <tr>
+        <th>Player Name</th>
+        <th>Facility Category</th>
+        <th>Facility Name</th>
+        <th>Booking Date</th>
+        <th>Staring Time</th>
+        <th>Ending Time</th>
+    </tr>
+    <tr *ngFor="let b of book,index as i">
+        <td>{{b.full_name}}</td>
+        <td>{{b.facility_category}}</td>
+        <td>{{b.facility_name}}</td>
+        <td>{{b.bookingDate}}</td>
+        <td>{{b.startTime}}</td>
+        <td>{{b.endTime}}</td>
+    </tr>
+</table>
+<!-- </div>
+</div> -->
+
+
+<!-- <h2 style="text-align: center; margin-top: 20px; font-size: 150%; color: rgb(240, 236, 236);">Facility Details
+        </h2>
+        <div class="row" style="margin-right:100px">
+            <table>
+                <tr >
+                    <th>Facility ID</th>
+                    <th>Facility Name</th>
+                    <th>Facility Category</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                <tr style="background-color: aliceblue;" *ngFor="let f of fac,index as i">
+                    <td>{{f.facilityId}}</td>
+                    <td>{{f.facilityName}}</td>
+                    <td>{{f.facilityCategory}}</td>
+                    <td>{{f.facilityStartTime}}</td>
+                    <td>{{f.facilityEndTime}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div> -->

@@ -1,0 +1,118 @@
+<div class="container">
+    <header>Book Your Facility</header>
+    <form class="form" name="myForm" #myForm="ngForm" #regForm='ngForm' (ngSubmit)='onSubmit(myForm)'>
+        <div class="form first">
+            <div class="personal details">
+                <div class="fields">
+
+                    <!-- <div class="input-field">
+                        <label>Facility ID</label>
+                        <input name="facilityId" type="number" required placeholder="Facility ID" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="booking.facilityId" #facilityId="ngModel" />
+                    </div> -->
+                    <div class="input-field">
+                        <label>Facility ID</label>
+                        <select input name="facilityId" type="number" required placeholder="Facility ID" class="form__input"
+                        id="exampleInputPassword1" [(ngModel)]="booking.facilityId" #facilityId="ngModel" >
+                            <option disabled selected="selected">Select facility ID</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Booking Date</label>
+                        <input name="bookingDate" type="date" required placeholder="Booking Date" class="form__input"
+                            id="exampleInputPassword1" [(ngModel)]="booking.bookingDate" #bookingDate="ngModel" />
+                    </div>
+
+                    <!-- <div class="input-field">
+                        <label>Facility Name</label>
+                        <select input name="facilityName" type="text" required placeholder="Select Facility Name"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.facilityName"
+                            #facilityName="ngModel">
+                            <option disabled selected="selected">Select Facility Name</option>
+                            <option>Cricket</option>
+
+                            <option>Football</option>
+                            <option>Basketball</option>
+
+                            <option>Hockey </option>
+
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Facility Category</label>
+                        <select input name="facilityCategory" type="text" required
+                            placeholder="Select facility Category" class="form__input" id="exampleInputPassword1"
+                            [(ngModel)]="booking.facilityCategory" #facilityCategory="ngModel">
+                            <option disabled selected="selected">Select facility Category</option>
+                            <option>Cricket</option>
+                            <option>Football</option>
+                            <option>Basketball</option>
+                            <option>Hockey</option>
+                        </select>
+                    </div> -->
+
+
+                    <div class="input-field">
+                        <label>Starting Time</label>
+                        <select input name="startTime" type="text" required placeholder="Select Start Time"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.startTime"
+                            #startTime="ngModel">
+                            <option disabled selected="selected">Select Your Start Time</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 AM</option>
+                            <option>13:00 PM</option>
+                            <option>14:00 PM</option>
+                            <option>15:00 PM</option>
+                            <option>16:00 PM</option>
+                            <option>17:00 PM</option>
+                            <option>18:00 PM</option>
+                            <option>19:00 PM</option>
+                            <option>20:00 PM</option>
+                            <option>21:00 PM</option>
+                            <option>22:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>End Time</label>
+                        <select input name="endTime" type="text" required placeholder="Select End Time"
+                            class="form__input" id="exampleInputPassword1" [(ngModel)]="booking.endTime"
+                            #endTime="ngModel">
+                            <option value="" disabled selected hidden>Select End Time</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 AM</option>
+                            <option>13:00 PM</option>
+                            <option>14:00 PM</option>
+                            <option>15:00 PM</option>
+                            <option>16:00 PM</option>
+                            <option>17:00 PM</option>
+                            <option>18:00 PM</option>
+                            <option>19:00 PM</option>
+                            <option>20:00 PM</option>
+                            <option>21:00 PM</option>
+                            <option>22:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success"
+                style=" text-align:center; ; margin-bottom: 10px; background-color: rgb(6, 92, 6);">Submit</button>
+        </div>
+    </form>
+</div>
